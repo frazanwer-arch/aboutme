@@ -17,7 +17,7 @@
     --text-muted: #94a3b8;
     --border: #334155;
     --grid-color: rgba(99, 102, 241, 0.05);
-    
+
     /* Spacing */
     --section-padding: 100px 20px;
     --container-max-width: 1100px;
@@ -35,7 +35,7 @@ html {
 
 body {
     background-color: var(--bg-dark);
-    background-image: 
+    background-image:
         radial-gradient(var(--grid-color) 1px, transparent 1px),
         linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
         linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
@@ -59,7 +59,10 @@ body::after {
     z-index: -1;
 }
 
-h1, h2, h3, .brand {
+h1,
+h2,
+h3,
+.brand {
     font-family: 'Outfit', sans-serif;
     letter-spacing: -0.02em;
 }
@@ -148,7 +151,8 @@ nav .container {
     color: var(--text-muted);
 }
 
-.nav-links a:hover, .nav-links a.active {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--text-main);
 }
 
@@ -169,7 +173,7 @@ nav .container {
     right: -10%;
     width: 60%;
     height: 80%;
-    background: 
+    background:
         radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%),
         radial-gradient(circle at 20% 30%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
     z-index: -1;
@@ -178,8 +182,15 @@ nav .container {
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); opacity: 0.8; }
-    100% { transform: scale(1.1); opacity: 1; }
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
 }
 
 .hero-content {
@@ -492,27 +503,31 @@ footer {
     body {
         cursor: none;
     }
-    a, button, .btn {
+
+    a,
+    button,
+    .btn {
         cursor: none;
     }
 }
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
     }
-    
+
     .hero h1 {
         font-size: 3rem;
     }
-    
+
     .about-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .skills-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .contact-card {
         padding: 2.5rem 1.5rem;
     }
