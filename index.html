@@ -12,18 +12,28 @@
 
 <body>
 
+    <!-- Aesthetic Background Elements -->
+    <div class="aura-bg">
+        <div class="aura aura-1"></div>
+        <div class="aura aura-2"></div>
+        <div class="aura aura-3"></div>
+    </div>
+    <div class="grid-overlay"></div>
+
     <!-- Header / Navbar -->
     <nav id="navbar">
         <div class="container">
-            <a href="#" class="brand">FRAZ ANWER</a>
-            <ul class="nav-links">
-                <li><a href="#hero" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-container">
+                <a href="#" class="brand">FRAZ ANWER</a>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -31,7 +41,7 @@
     <section class="hero" id="hero">
         <div class="container hero-content">
             <span class="hero-badge">Engineering Leadership</span>
-            <h1>Building Scalable Systems & High-Performing Teams.</h1>
+            <h1 class="gradient-text">Building Scalable Systems & High-Performing Teams.</h1>
             <p>Engineering Manager with 14+ years of experience driving large-scale software delivery across ERP, PMS,
                 and SaaS platforms. I lead high-performing teams, define technical strategy, and deliver scalable
                 systems that translate complex business needs into measurable outcomes.</p>
@@ -51,8 +61,8 @@
                         style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 24px; border: 1px solid var(--border); box-shadow: var(--shadow-lg);">
                 </div>
                 <div class="about-text" data-reveal>
-                    <h2 class="title-underline">My Philosophy</h2>
-                    <h3>Bridging technical excellence with strategic leadership.</h3>
+                    <h2 class="title-underline gradient-text">My Philosophy</h2>
+                    <h3 style="color: var(--text-main);">Bridging technical excellence with strategic leadership.</h3>
                     <p>Throughout my 14-year journey from Principal Engineer to Engineering Manager, I have focused on
                         one core principle: <strong>Scale through empowerment.</strong></p>
                     <p style="margin-top: 1rem;">I believe that great engineering organizations aren't just built on
@@ -61,11 +71,11 @@
 
                     <div class="stats-grid">
                         <div class="stat-item">
-                            <h4>14+</h4>
+                            <h4 class="gradient-text">14+</h4>
                             <p>Years of Experience</p>
                         </div>
                         <div class="stat-item">
-                            <h4>50+</h4>
+                            <h4 class="gradient-text">50+</h4>
                             <p>Global Solutions Delivered</p>
                         </div>
                     </div>
@@ -75,9 +85,9 @@
     </section>
 
     <!-- Experience Section -->
-    <section class="section" id="experience" style="background: var(--bg-surface);">
+    <section class="section" id="experience">
         <div class="container">
-            <h2 class="title-underline" data-reveal>Professional Journey</h2>
+            <h2 class="title-underline gradient-text" data-reveal>Professional Journey</h2>
             <div class="timeline">
 
                 <div class="timeline-item" data-reveal>
@@ -204,11 +214,11 @@
     <!-- Skills Section -->
     <section class="section" id="skills">
         <div class="container">
-            <h2 class="title-underline" data-reveal>Expertise</h2>
+            <h2 class="title-underline gradient-text" data-reveal>Expertise</h2>
             <div class="skills-grid">
 
                 <div class="skill-category" data-reveal>
-                    <h3>Engineering Leadership</h3>
+                    <h3 style="color: var(--text-main);">Engineering Leadership</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Team Scaling</span>
                         <span class="skill-tag">Mentorship</span>
@@ -220,10 +230,10 @@
                 </div>
 
                 <div class="skill-category" data-reveal>
-                    <h3>Technical Excellence</h3>
+                    <h3 style="color: var(--text-main);">Technical Excellence</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">System Architecture</span>
-                        <span class="skill-tag">C# 13 / .NET 8</span>
+                        <span class="skill-tag">C# / .NET 8</span>
                         <span class="skill-tag">Angular 8+</span>
                         <span class="skill-tag">Android Studio (Java)</span>
                         <span class="skill-tag">SSIS / SSAS / SQL</span>
@@ -236,9 +246,9 @@
     </section>
 
     <!-- Education Section -->
-    <section class="section" id="education" style="background: var(--bg-dark);">
+    <section class="section" id="education">
         <div class="container">
-            <h2 class="title-underline" data-reveal>Education & Certifications</h2>
+            <h2 class="title-underline gradient-text" data-reveal>Education & Certifications</h2>
             <div class="skills-grid">
                 <div class="skill-category" data-reveal>
                     <h3>Academic Qualification</h3>
@@ -260,7 +270,7 @@
     <section class="section" id="contact">
         <div class="container">
             <div class="contact-card" data-reveal>
-                <h2>Let's build the future together.</h2>
+                <h2 class="gradient-text">Let's build the future together.</h2>
                 <p>I'm always open to discussing engineering leadership, technical challenges, or strategic
                     collaborations.</p>
 
@@ -271,13 +281,26 @@
                         Articles</a>
                 </div>
 
-                <div class="contact-form-container"
-                    style="max-width: 800px; margin: 4rem auto 0; background: #fff; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg); border: 1px solid var(--border);">
-                    <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSd_Mk-INg3kv30Oi2hPe4Qc29idew5SnhZspwE6aRjKbSBocA/viewform?usp=publish-editor"
-                        width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0"
-                        style="display: block;">Loading…</iframe>
-                </div>
+                <!-- Custom High-Fidelity Contact Form -->
+                <form class="contact-form" action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" class="form-input" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Physical Address / Location</label>
+                        <input type="text" name="address" class="form-input" placeholder="City, Country" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" name="phone" class="form-input" placeholder="+1 (555) 000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label>Comments / Message</label>
+                        <textarea name="message" class="form-input" placeholder="Tell me about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Send Message</button>
+                </form>
 
                 <div style="margin-top: 3rem;">
                     <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Prefer a traditional

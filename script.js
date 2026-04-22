@@ -106,10 +106,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function animateCursor() {
-        // Linear interpolation for smooth movement
         cursorX += (mouseX - cursorX) * 0.2;
         cursorY += (mouseY - cursorY) * 0.2;
-        
         followerX += (mouseX - followerX) * 0.1;
         followerY += (mouseY - followerY) * 0.1;
 
@@ -130,25 +128,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animateCursor();
 
-    // Hover effects
+    // Hover effects for cursor
     interactiveElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
-            cursor.classList.add('hovered');
-            follower.classList.add('hovered');
+            cursor.style.transform = 'translate(-50%, -50%) scale(4)';
+            cursor.style.background = 'rgba(129, 140, 248, 0.1)';
+            cursor.style.border = '1px solid var(--primary)';
+            follower.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            follower.style.borderColor = 'var(--primary)';
         });
         el.addEventListener('mouseleave', () => {
-            cursor.classList.remove('hovered');
-            follower.classList.remove('hovered');
+            cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursor.style.background = 'var(--primary)';
+            cursor.style.border = 'none';
+            follower.style.transform = 'translate(-50%, -50%) scale(1)';
+            follower.style.borderColor = 'rgba(129, 140, 248, 0.3)';
         });
     });
 
     // Hide cursor when leaving window
     document.addEventListener('mouseleave', () => {
-        cursor.style.opacity = '0';
-        follower.style.opacity = '0';
+        if(cursor) cursor.style.opacity = '0';
+        if(follower) follower.style.opacity = '0';
     });
     document.addEventListener('mouseenter', () => {
-        cursor.style.opacity = '1';
-        follower.style.opacity = '1';
+        if(cursor) cursor.style.opacity = '1';
+        if(follower) follower.style.opacity = '1';
     });
 });
